@@ -1,0 +1,65 @@
+@use "../vendors/bootstrap";
+@use "../base/_base-index";
+
+.container-showcase {
+  .row {
+    @extend .container-fluid;
+    @extend .d-flex;
+    @extend .p-0;
+
+    .col-image {
+      @extend .col-md-8;
+      @extend .p-0;
+
+      img {
+        @extend .img-cover; // inherited from base/sizes
+      }
+    }
+
+    .col-text {
+      @extend .col-md-4;
+      @extend .p-5;
+      @extend .d-flex;
+      @extend .flex-column;
+      @extend .justify-content-center;
+      @extend .align-items-center;
+      @extend .text-center;
+    }
+
+    hr {
+      border: 1px solid;
+      width: 2rem;
+    }
+  }
+
+  &.reversed {
+    .row {
+        @extend .flex-row-reverse;
+    }
+  }
+
+  &.primary-theme {
+    .row {
+      .col-text {
+        @extend .bg-primary;
+        @extend .text-secondary;
+      }
+      hr {
+        @extend .border-secondary;
+      }
+    }
+  }
+
+  &.secondary-theme {
+    .row {
+      .col-text {
+        @extend .bg-secondary;
+        @extend .text-primary;
+      }
+      hr {
+        @extend .border-primary;
+      }
+    }
+  }
+  
+}
