@@ -1,0 +1,45 @@
+@use "../vendors/bootstrap";
+@use "../utilities/_utilities-index" as utilities;
+
+.dropdown {
+  button.dropdown-btn {
+    @include utilities.border-bottom;
+    @extend .border-primary;
+    @extend .rounded-0;
+  }
+
+  .dropdown-menu {
+    @extend .border-0;
+    @extend .rounded-0;
+
+    .dropdown-item {
+      position: relative;
+      @extend .text-primary;
+      @extend .p-3;
+      transition: padding 0.1s ease-in-out;
+
+      // layer to produce underine with opacity
+      &::after {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        content: "";
+        @include utilities.border-bottom;
+        @extend .border-primary;
+        opacity: 0.1;
+      }
+
+      &:hover {
+        @extend .font-weight-bold;
+        @extend .pl-4;
+        background: none;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

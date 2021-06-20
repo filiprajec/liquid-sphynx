@@ -1,9 +1,3 @@
-@use "./colors.scss";
-
-// Customize some defaults
-$body-color: colors.$darkblue;
-$primary: colors.$darkblue;
-$secondary: colors.$macaroni-and-cheese;
-
-// import bootstrap
-@import "bootstrap/scss/bootstrap";
+@use "./base/__base-index" as base;
+@use "./components/_components-index";
+@use "./vendors/bootstrap";

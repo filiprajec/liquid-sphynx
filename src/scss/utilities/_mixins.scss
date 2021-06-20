@@ -1,0 +1,8 @@
+@use "../vendors/bootstrap";
+
+@mixin border-bottom {
+  @extend .border;
+  @extend .border-top-0;
+  @extend .border-left-0;
+  @extend .border-right-0;
+}

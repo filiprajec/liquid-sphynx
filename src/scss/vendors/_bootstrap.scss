@@ -1,0 +1,11 @@
+@use "../base/_base-index" as base;
+
+// Toggle bootstrap global options
+
+// Customize bootstap defaults
+$body-color: base.$darkblue;
+$primary: base.$darkblue;
+$secondary: base.$macaroni-and-cheese;
+
+// Import bootstrap
+@import "bootstrap/scss/bootstrap";
