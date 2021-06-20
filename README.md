@@ -1,4 +1,4 @@
-# HTML Boilerplate (+ Bootstrap)
+# liquid. SPHINX web page designs
 
 ## Getting Started
 
