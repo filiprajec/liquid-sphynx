@@ -1,0 +1,9 @@
+"rules": {
+    "block-no-empty": true,
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "color-no-invalid-hex": true,
+    "color-named": "never",
+    "declaration-colon-space-after": "always",
+    "max-empty-lines": 1
+}
