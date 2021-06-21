@@ -12,7 +12,7 @@
     "watch:css": "onchange \"src/scss\" -- npm run build:css",
     "build:images": "imagemin src/images/**/* --out-dir=build/images",
     "watch:images": "onchange \"src/images\" -- npm run build:images",
-    "build:fonts": "cpx \"src/fonts\" \"build/fonts\"",
+    "build:fonts": "cpx --include-empty-dirs \"src/fonts/**/*\" \"build/fonts/\" ",
     "watch:fonts": "onchange \"src/fonts/**/*\" -- npm run build:fonts",
     "build:js": "webpack --mode=production",
     "watch:js": "onchange \"src/js\" -- webpack --mode=development",
