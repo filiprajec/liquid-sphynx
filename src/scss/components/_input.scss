@@ -14,4 +14,8 @@ input.input-field {
     box-shadow: none;
     @extend .border-primary;
   }
+
+  &.invalid {
+    @extend .border-danger;
+  }
 }

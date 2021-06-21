@@ -1,5 +1,5 @@
 <header class="pb-5">
-  <nav class="navbar">
+  <nav class="navbar flex-column">
     <div class="container-fluid">
       <div class="navbar-collapse collapse order-2 navbar-left nav-content">
         <ul class="nav navbar-nav">
@@ -47,8 +47,14 @@
           <li class="nav-item">
             <a class="nav-link" href="#">News</a>
           </li>
+          <li class="nav-item">
+            <button class="nav-link btn btn-outline-secondary text-secondary text-uppercase px-3" id="enquire-button" href="#">Enquire</a>
+          </li>
         </ul>
       </div>
+    </div>
+    <div class="container-fluid p-0 d-none" id="header-enquiry-form-portal">
+      <enquiry-form theme="theme-dark"></enquiry-form>
     </div>
   </nav>
 </header>

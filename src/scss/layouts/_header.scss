@@ -51,5 +51,13 @@ header {
         }
       }
     }
+
+    // fixes the inverse colours of secondary button in a nav list
+    .btn-outline-secondary {
+      &:hover {
+        @extend .text-primary;
+      }
+    }
+    
   }
 }

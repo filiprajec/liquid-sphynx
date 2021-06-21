@@ -10,6 +10,24 @@
     }
   }
 
+  &.theme-dark {
+    @extend .bg-primary;
+
+    form {
+      input {
+        @extend .text-secondary;
+        @extend .border-secondary; // this will override invalid input so we need to restate the rule
+        &.invalid {
+          @extend .border-danger;
+        }
+      }
+
+      button[type=submit] {
+        @extend .btn-secondary;
+      }
+    }
+  }
+
   form {
     .input-row {
       @extend .mb-3;
@@ -24,7 +42,7 @@
         }
       }
     }
-    button {
+    button[type=submit] {
       @extend .mt-3, .text-uppercase;
     }
   }
