@@ -6,8 +6,8 @@ $enable-rounded: false;
 
 // Customize bootstap defaults
 
-$font-family-sans-serif: Milliard, sans-serif;
-$font-size-base: 0.75rem;
+$font-family-sans-serif: base.$font-family;
+$font-size-base: base.$font-size-base;
 
 $theme-colors: (
   "very-light-pink": #d8d8d8,

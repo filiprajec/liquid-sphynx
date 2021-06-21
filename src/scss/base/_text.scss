@@ -1,3 +1,6 @@
+$font-size-base: 0.75rem;
+$font-family: Milliard, sans-serif;
+
 h1,
 h2,
 h3,
@@ -21,4 +24,8 @@ h6 {
 
 .text-underlined {
   text-decoration: underline;
+}
+
+.text-size-120 {
+  font-size: $font-size-base * 1.20;
 }
