@@ -1,15 +1,13 @@
 @use "../vendors/bootstrap";
 @use "../base/_base-index";
+@use "../utilities/_utilities-index" as utilities;
 
 .container-showcase {
   .row {
-    @extend .container-fluid;
-    @extend .d-flex;
-    @extend .p-0;
+    @extend .container-fluid, .d-flex, .p-0;
 
     .col-image {
-      @extend .col-md-8;
-      @extend .p-0;
+      @extend .col-md-8, .p-0;
 
       img {
         @extend .img-cover; // inherited from base/sizes
@@ -17,13 +15,19 @@
     }
 
     .col-text {
-      @extend .col-md-4;
-      @extend .p-5;
-      @extend .d-flex;
-      @extend .flex-column;
-      @extend .justify-content-center;
-      @extend .align-items-center;
-      @extend .text-center;
+      @extend .col-md-4,
+        .p-5,
+        .d-flex,
+        .flex-column,
+        .justify-content-center,
+        .align-items-center,
+        .text-center;
+      h5 {
+        @extend .text-spaced-lg, .text-uppercase;
+      }
+      h6 {
+        @extend .text-spaced-sm, .text-uppercase;
+      }
     }
 
     hr {
@@ -34,15 +38,14 @@
 
   &.reversed {
     .row {
-        @extend .flex-row-reverse;
+      @extend .flex-row-reverse;
     }
   }
 
-  &.primary-theme {
+  &.theme-primary {
     .row {
       .col-text {
-        @extend .bg-primary;
-        @extend .text-secondary;
+        @include utilities.theme-primary-filled;
       }
       hr {
         @extend .border-secondary;
@@ -50,16 +53,14 @@
     }
   }
 
-  &.secondary-theme {
+  &.theme-secondary {
     .row {
       .col-text {
-        @extend .bg-secondary;
-        @extend .text-primary;
+        @include utilities.theme-secondary-filled;
       }
       hr {
         @extend .border-primary;
       }
     }
   }
-  
 }

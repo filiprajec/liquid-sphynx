@@ -2,8 +2,7 @@
 
 .radio-inline {
   label {
-    @extend .pl-2;
-    @extend .m-0;
+    @extend .pl-2, .m-0;
     cursor: pointer;
     &:not(:last-child)::after {
       // add a vertical seperator

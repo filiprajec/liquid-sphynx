@@ -1,8 +1,28 @@
 @use "../vendors/bootstrap";
 
+// resets & forces only bottom-border
 @mixin border-bottom {
-  @extend .border;
-  @extend .border-top-0;
-  @extend .border-left-0;
-  @extend .border-right-0;
+  @extend .border, .border-top-0, .border-left-0, .border-right-0;
+}
+
+@mixin theme-primary-filled {
+  @extend .bg-primary, .text-secondary;
+}
+
+@mixin theme-secondary-filled {
+  @extend .bg-secondary, .text-primary;
+}
+
+// adds a layer on top of element using after
+@mixin after-layer {
+  position: relative;
+  &::after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    @content;
+  }
 }

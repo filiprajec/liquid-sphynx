@@ -1,11 +1,33 @@
 @use "../base/_base-index" as base;
 
 // Toggle bootstrap global options
+$enable-responsive-font-sizes: true;
+$enable-rounded: false;
 
 // Customize bootstap defaults
+
+$font-family-sans-serif: Milliard, sans-serif;
+$font-size-base: 0.75rem;
+
+$theme-colors: (
+  "very-light-pink": #d8d8d8,
+  "goldenrod": #ffc808,
+  "darkblue": #070768,
+  "light-peach": #dfd4c6,
+  "light-blue-grey": #cedbde,
+  "macaroni-and-cheese": #e5ac39,
+  "macaroni-and-cheese-50": rgba(229, 172, 57, 0.5),
+  "brown-grey": #919191
+);
+
 $body-color: base.$darkblue;
 $primary: base.$darkblue;
 $secondary: base.$macaroni-and-cheese;
 
 // Import bootstrap
 @import "bootstrap/scss/bootstrap";
+
+// Overwrite bootstrap classes
+.font-weight-bolder {
+  font-weight: 500 !important;
+}

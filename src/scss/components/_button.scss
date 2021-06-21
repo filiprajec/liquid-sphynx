@@ -1,0 +1,20 @@
+@use "../vendors/bootstrap";
+@use "../utilities/_utilities-index" as utilities;
+
+.btn {
+  @extend .font-weight-bolder;
+  &.btn-padded {
+    @extend .px-5, .py-3;
+  }
+}
+
+.btn-outline-primary {
+  &.opacity-10 {
+    @extend .border-0;
+    // add a layer to apply opacity only to border and not button content
+    @include utilities.after-layer {
+      @extend .border, .border-primary;
+      opacity: 0.1;
+    }
+  }
+}

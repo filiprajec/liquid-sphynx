@@ -1,3 +1,24 @@
-.text-spaced {
-  letter-spacing: 0.4em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600 !important;
+}
+
+.text-spaced-lg {
+  letter-spacing: 0.5em;
+}
+
+.text-spaced-md {
+  letter-spacing: 0.3em;
+}
+
+.text-spaced-sm {
+  letter-spacing: 0.1em;
+}
+
+.text-underlined {
+  text-decoration: underline;
 }

@@ -1,0 +1,51 @@
+@use "../vendors/bootstrap";
+
+.navbar {
+  @extend .container-fluid,
+    .navbar-expand-md,
+    .position-fixed,
+    .navbar-expand-lg,
+    .navbar-dark,
+    .bg-primary,
+    .py-3,
+    .text-secondary;
+  z-index: bootstrap.$zindex-fixed;
+
+  .navbar-left {
+    @extend .mt-3, .mt-md-0;
+  }
+
+  .navbar-right {
+    @extend 
+      .mb-3,
+      .mb-md-0;
+  }
+
+  .navbar-center {
+    @extend .nav,
+      .navbar-nav,
+      .text-nowrap,
+      .flex-row,
+      .mx-md-auto,
+      .order-1,
+      .order-md-2;
+  }
+
+  ul {
+    li {
+      @extend .mx-2, .mx-lg-3;
+      a {
+        @extend .text-secondary, .text-uppercase;
+        &.navbar-brand {
+          @extend .mx-auto,
+            .text-secondary,
+            .font-weight-lighter,
+            .text-spaced-md;
+        }
+        &.nav-link {
+          @extend .font-weight-bolder, .text-spaced-sm;
+        }
+      }
+    }
+  }
+}
