@@ -13,15 +13,28 @@
   @extend .bg-secondary, .text-primary;
 }
 
+@mixin absolute-layer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 // adds a layer on top of element using after
 @mixin after-layer {
   position: relative;
   &::after {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
+    @include absolute-layer;
+    content: "";
+    @content;
+  }
+}
+
+@mixin before-layer {
+  position: relative;
+  &::before {
+    @include absolute-layer;
     content: "";
     @content;
   }

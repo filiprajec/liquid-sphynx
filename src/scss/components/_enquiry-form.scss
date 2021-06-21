@@ -1,0 +1,46 @@
+@use "../vendors/bootstrap";
+@use "../utilities/_utilities-index" as utilities;
+
+.enquiry-form {
+  &.theme-light {
+    @include utilities.before-layer {
+      @extend .bg-brown-grey;
+      opacity: 0.1;
+      z-index: -1;
+    }
+  }
+
+  form {
+    .input-row {
+      @extend .mb-3;
+
+      label {
+        @extend .d-none;
+      }
+
+      input {
+        &:not(:last-child) {
+          @extend .mr-5;
+        }
+      }
+    }
+    button {
+      @extend .mt-3, .text-uppercase;
+    }
+  }
+
+  h6 {
+    @extend .text-uppercase, .text-spaced-sm;
+  }
+
+  span {
+    @extend .d-block;
+  }
+
+  img.profile-image {
+    height: auto;
+    width: 5rem;
+    object-fit: contain;
+    @extend .pr-3;
+  }
+}

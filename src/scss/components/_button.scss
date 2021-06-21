@@ -6,6 +6,9 @@
   &.btn-padded {
     @extend .px-5, .py-3;
   }
+  &.btn-wide {
+    @extend .px-5, .py-1;
+  }
 }
 
 .btn-outline-primary {

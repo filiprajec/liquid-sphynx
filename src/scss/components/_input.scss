@@ -1,0 +1,17 @@
+@use "../vendors/bootstrap";
+@use "../utilities/_utilities-index" as utilities;
+
+input.input-field {
+  @extend .text-primary, .mw-300px;
+  @include utilities.border-bottom;
+  background-color: transparent;
+  &::placeholder {
+    @extend .text-brown-grey;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    @extend .border-primary;
+  }
+}
