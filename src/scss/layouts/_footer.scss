@@ -1,30 +1,101 @@
 @use "../vendors/bootstrap";
 @use "../utilities/_utilities-index" as utilities;
 
-#sign-up-form {
-  input {
-    @extend .text-primary, .mw-300px;
-    @include utilities.border-bottom;
-    &::placeholder {
-      @extend .text-brown-grey;
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: none;
-      @extend .border-primary;
-    }
+footer {
+  @extend .text-brown-grey;
+  * {
+    @extend .text-brown-grey;
   }
-}
-
-.row {
-    @extend .p-5;
+  .footer-row {
+    @extend .row, .p-5;
 
     .col-a {
-        @extend .col-sm-3;
+      @extend .col-sm-3, .col-lg-2;
     }
 
-    .col-sm-pt {
-        @extend .pt-4, .pt-sm-0;
+    .pt-on-sm {
+      @extend .pt-4, .pt-sm-0;
     }
+
+    .pt-on-md {
+      @extend .pt-4, .pt-md-0;
+    }
+
+    .pt-on-lg {
+      @extend .pt-4, .pt-lg-0;
+    }
+
+    &.newsletter-row {
+      form {
+        input {
+          @extend .text-primary, .mw-300px;
+          @include utilities.border-bottom;
+          &::placeholder {
+            @extend .text-brown-grey;
+          }
+
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            @extend .border-primary;
+          }
+        }
+      }
+    }
+
+    &.about-row {
+      span {
+        &.sub-heading {
+          @extend .d-block, .mb-3;
+        }
+      }
+
+      a {
+        &.footer-email {
+          @extend .text-underlined;
+        }
+      }
+
+      ul {
+        @extend .li-type-none, .pl-0;
+        &.nav-links {
+          li {
+            @extend .d-inline, .pl-2, .m-0;
+            cursor: pointer;
+            &:not(:last-child)::after {
+              @extend .pl-2;
+              content: "|"; // add a vertical seperator
+            }
+
+            a.active {
+              @extend .font-weight-bold;
+            }
+          }
+
+          &.uppercase {
+            li a {
+              @extend .text-uppercase;
+            }
+          }
+        }
+
+        &.social-links {
+          @extend .text-left, .text-md-center;
+          li {
+            @extend .d-inline;
+            &:not(:last-child) {
+              @extend .pr-3;
+            }
+
+            .button-social {
+              @extend .btn, .p-0;
+              img {
+                max-height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
