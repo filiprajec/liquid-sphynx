@@ -5,6 +5,8 @@ input.input-field {
   @extend .text-primary, .mw-300px;
   @include utilities.border-bottom;
   background-color: transparent;
+  appearance: none;
+  
   &::placeholder {
     @extend .text-brown-grey;
   }
