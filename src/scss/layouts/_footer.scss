@@ -2,7 +2,6 @@
 @use "../utilities/_utilities-index" as utilities;
 
 footer {
-  
   .footer-row {
     @extend .row, .px-3, .px-md-5, .py-5;
 
@@ -45,7 +44,6 @@ footer {
     }
 
     &.about-row {
-
       @extend .pb-3;
 
       span {
@@ -60,42 +58,18 @@ footer {
         }
       }
 
-      ul {
-        @extend .li-type-none, .pl-0;
-        &.nav-links {
-          li {
-            @extend .d-inline, .pl-2, .m-0;
-            cursor: pointer;
-            &:not(:last-child)::after {
-              @extend .pl-2;
-              content: "|"; // add a vertical seperator
-            }
-
-            a.active {
-              @extend .font-weight-bold;
-            }
+      ul.social-links {
+        @extend .li-type-none, .pl-0, .text-left, .text-md-center;
+        li {
+          @extend .d-inline;
+          &:not(:last-child) {
+            @extend .pr-3;
           }
 
-          &.uppercase {
-            li a {
-              @extend .text-uppercase;
-            }
-          }
-        }
-
-        &.social-links {
-          @extend .text-left, .text-md-center;
-          li {
-            @extend .d-inline;
-            &:not(:last-child) {
-              @extend .pr-3;
-            }
-
-            .button-social {
-              @extend .btn, .p-0;
-              img {
-                max-height: 1rem;
-              }
+          .button-social {
+            @extend .btn, .p-0;
+            img {
+              max-height: 1rem;
             }
           }
         }

@@ -1,0 +1,51 @@
+@use "../vendors/bootstrap";
+
+ul.nav-inline {
+  @extend .li-type-none, .pl-0;
+  li {
+    @extend .d-inline, .pl-2, .m-0;
+
+    &:not(:last-child)::after {
+      @extend .pl-2;
+      content: "|"; // add a vertical seperator
+    }
+
+    .active {
+      @extend .font-weight-bold;
+    }
+
+    a {
+      cursor: pointer;
+    }
+  }
+
+  &.uppercase {
+    li {
+      @extend .text-uppercase;
+    }
+  }
+
+  &.theme-primary {
+    * {
+      @extend .text-brown-grey;
+    }
+
+    li {
+      &.active {
+        @extend .text-primary, .font-weight-bolder;
+      }
+    }
+  }
+
+  &.theme-secondary {
+    * {
+      @extend .text-secondary;
+    }
+
+    li {
+      &.active {
+        @extend .text-primary, .font-weight-bolder;
+      }
+    }
+  }
+}

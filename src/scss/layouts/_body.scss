@@ -1,0 +1,5 @@
+@use "../vendors/bootstrap";
+
+.container-main {
+    @extend .container-fluid, .py-3, .py-sm-5, .px-3, .px-sm-5, .mw-1200px;
+}
