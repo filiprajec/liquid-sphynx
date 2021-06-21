@@ -124,7 +124,7 @@ export default Vue.component("enquiry-form", {
   template: `
   <div class="container-fluid p-0 enquiry-form" 
         v-bind:class="state.theme">
-    <div class="row mw-900px mx-auto p-5">
+    <div class="row mw-900px mx-auto p-3 p-sm-5">
       <div class="col-12 col-md-4">
       </div>
       <div class="col-12 col-md-8 pt-5 pt-md-0 pl-0 pl-sm-5">
