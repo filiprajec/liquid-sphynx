@@ -2,12 +2,13 @@
 @use "../utilities/_utilities-index" as utilities;
 
 footer {
-  @extend .text-brown-grey;
-  * {
-    @extend .text-brown-grey;
-  }
+  
   .footer-row {
-    @extend .row, .p-5;
+    @extend .row, .px-3, .px-md-5, .py-5;
+
+    * {
+      @extend .text-brown-grey;
+    }
 
     .col-a {
       @extend .col-sm-3, .col-lg-2;
@@ -44,6 +45,9 @@ footer {
     }
 
     &.about-row {
+
+      @extend .pb-3;
+
       span {
         &.sub-heading {
           @extend .d-block, .mb-3;
@@ -90,7 +94,7 @@ footer {
             .button-social {
               @extend .btn, .p-0;
               img {
-                max-height: 20px;
+                max-height: 1rem;
               }
             }
           }
